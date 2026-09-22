@@ -108,8 +108,7 @@ async def main():
 
 if __name__ == "__main__":
     # Arrancamos el bucle de Telegram junto con Flask para Render
-    loop = asyncio.get_event_loop()
-    loop.create_task(main())
+   asyncio.run(main())
     
     port = int(os.environ.get("PORT", 10000))
     app_flask.run(host="0.0.0.0", port=port)
