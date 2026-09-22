@@ -94,7 +94,7 @@ async def comando_duplicados(update: Update, context: ContextTypes.DEFAULT_TYPE)
     else:
         await update.message.reply_text(f"✨ Análisis finalizado. Se revisaron {revisados} elementos y no hay duplicados.")
 
-async main():
+async def main():
     global application
     application = ApplicationBuilder().token(BOT_TOKEN).build()
     application.add_handler(CommandHandler("duplicados", comando_duplicados))
